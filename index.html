@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OfferZone - Exclusive Electronics Deals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="header">
+        🔥 <span>UP TO 90% OFF ON ELECTRONICS – EXCLUSIVELY ON AMAZON.IN!</span> 🔥
+    </div>
+
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="assets/OfferZoneLogoNew.jpg" alt="OfferZone Logo" class="logo">
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="main-title">Welcome to <span>OfferZone</span></h1>
+
+        <!-- Features -->
+        <ul class="features">
+            <li>✅ Shop Your Favorite Electronics at <b>Up to 90% OFF</b></li>
+            <li>✅ <b>100% Authentic Products</b> from Verified Sellers</li>
+            <li>✅ Genuine Reviews from Happy Customers</li>
+        </ul>
+
+        <!-- Telegram Call-to-Action -->
+        <div class="telegram">
+            <p>📢 <b>Join Our Exclusive Telegram Channel Today</b></p>
+            <a href="https://t.me/+W96FpmwRhjYzOTc8" class="join-btn" id="telegramLink">🚀 JOIN THE TELEGRAM CHANNEL</a>
+        </div>
+
+        <div class="countdown-container">
+            <h2>Hurry Up!</h2>
+            <div id="timer">
+                <span id="days">00</span>
+                <span id="hours">00</span>
+                <span id="minutes">00</span>
+                <span id="seconds">20</span>
+            </div>
+            <p class="timer-label">
+                <span>DAYS</span>
+                <span>HRS</span>
+                <span>MINS</span>
+                <span>SECS</span>
+            </p>
+        </div>
+        
+        
+    </div>
+
+    <!-- Timer Script -->
+    <script>
+        let seconds = 20; // Timer duration in seconds
+        const timerElement = document.getElementById("seconds");
+        const telegramLink = "https://t.me/+W96FpmwRhjYzOTc8"; 
+
+        const countdown = setInterval(() => {
+            if (seconds > 0) {
+                seconds--;
+                timerElement.innerText = String(seconds).padStart(2, '0');
+            } else {
+                clearInterval(countdown);
+                window.location.href = telegramLink; // Redirect to Telegram link
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
